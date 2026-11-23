@@ -319,7 +319,7 @@ function cpconShowInlineForm() {
   formRow.id = 'cpcon-inline-form';
   const placeholder = api ? api.placeholder('BR') : '';
   formRow.innerHTML =
-    '<div class="cpcon-av"><img src="/chatbot/images/camile.webp" alt="Camile" width="26" height="26"/></div>' +
+    '<div class="cpcon-av"><img src="/cpcon-previa-br-gsc-20261123/chatbot/images/camile.webp" alt="Camile" width="26" height="26"/></div>' +
     '<div class="cpcon-bbl cpcon-form-bbl">' +
     '  <div class="cpcon-form-group"><input type="text" id="cpcon-form-nome" placeholder="Nome *" maxlength="100" autocomplete="given-name"/><div id="cpcon-form-nome-err" class="cpcon-form-err" role="alert"></div></div>' +
     '  <div class="cpcon-form-group"><input type="email" id="cpcon-form-email" placeholder="Email corporativo *" maxlength="200" autocomplete="email"/><div id="cpcon-form-email-err" class="cpcon-form-err" role="alert"></div></div>' +
@@ -604,7 +604,7 @@ async function cpconSubmitForm() {
       }, cpconHoneypotValues());
       const postLead = async function () {
         const form_token = await cpconFetchFormToken();
-        return fetch(CRM_PROXY_URL + '/chatbot', {
+        return fetch(CRM_PROXY_URL + '/cpcon-previa-br-gsc-20261123/chatbot', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'same-origin',
@@ -1385,7 +1385,7 @@ function cpconShowTyping() {
   const row = document.createElement('div');
   row.id = 'cpcon-typing';
   row.className = 'cpcon-row';
-  row.innerHTML = '<div class="cpcon-av"><img src="/chatbot/images/camile.webp" alt="Camile" width="26" height="26"/></div><div class="cpcon-bbl"><em>digitando…</em></div>';
+  row.innerHTML = '<div class="cpcon-av"><img src="/cpcon-previa-br-gsc-20261123/chatbot/images/camile.webp" alt="Camile" width="26" height="26"/></div><div class="cpcon-bbl"><em>digitando…</em></div>';
   container.appendChild(row);
   cpconScrollDown();
 }
